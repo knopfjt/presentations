@@ -16,9 +16,13 @@ format:
 title: "Mortgages, Municipalities,<br>Myths, and Misconceptions"
 subtitle: "How to frame the affordable housing conversation"
 author: "Jonathan Knopf<br>Executive Director for Programs"
-#affiliation: "SAW Housing Summit"
-#date: 2023-10-11
-#date-format: long
+description: |
+  Talking about affordable housing might be the only thing more daunting than 
+  actually doing something about it. To lay the groundwork for meaningful 
+  progress, this presentation will reshape your perspective, strengthen 
+  what you know, and improve how you talk about housing.
+# date: 2023-10-11
+# date-format: long
 title-slide-attributes:
   data-background-color: "#1a3454"
 ---
@@ -63,7 +67,7 @@ title-slide-attributes:
 
 # What *is* affordable housing?
 
-## One term, many definitions.
+## One term, many definitions
 
 <br>
 
@@ -95,7 +99,7 @@ title-slide-attributes:
 
 ::::
 
-## Housing is a spectrum.
+## Housing is a spectrum
 
 :::{.fragment}
 
@@ -123,7 +127,21 @@ title-slide-attributes:
 
 :::
 
-# American housing policy in 3 charts
+# How it works
+
+## Homelessness and<br>supportive housing
+
+![](img/spectrum-homeless.png){.absolute top=250 width="1400"}
+
+## Public housing<br>and vouchers
+
+![](img/spectrum-ph.png){.absolute top=250 width="1400"}
+
+## Affordable rental
+
+![](img/spectrum-rental.png){.absolute top=250 width="1400"}
+
+# American housing policy in three charts
 
 ---
 
@@ -202,32 +220,179 @@ ggplot(lihtc, aes(year, units)) +
 
 ```
 
-## Where does this leave us?
-
-- Not meeting demand
-- Shifting burdens and roles
-- Hard-pressed to plan for the future
-
 ## Not to mention...
 
-[Lagging wages]{.absolute top=150 left=0}
+. . .
 
-[Labor and material costs]{.absolute bottom=200 right=50}
+[Rising interest rates]{.absolute top=150 left=0}
 
-[Private equity acquisitions]{.absolute top=200 right=100}
+. . .
 
-[Rising interest rates]{.absolute bottom=100 left=50}
+[Labor and material costs]{.absolute top=350 left=0}
 
-[Restrictive land use policies]{.absolute top=250 left=200}
+. . .
 
-[Workforce shortages]{.absolute bottom=300 right=300}
+[Restrictive land use policies]{.absolute top=550 left=0}
+
+. . .
+
+[Lagging wages]{.absolute top=150 left=650}
+
+. . .
+
+[Workforce shortages]{.absolute top=350 left=650}
+
+. . .
+
+[Private equity acquisitions]{.absolute top=550 left=650}
+
+## Where does this leave us?
+
+. . .
+
+Accelerating prices reflect lack of supply across the spectrum.
+
+. . . 
+
+Long-term shifts in federal policy place increasing responsibilities on states and local communities.
+
+. . .
+
+It's hard to plan for the future when we're still solving the past.
 
 # A broken housing market makes things tough for everyone.
 
-## What's broken?
+## What can we do?
 
+<br>
 
+::::: columns
 
-## Header
+:::: {.column width="50%" .fragment}
 
-Talking about affordable housing might be the only thing more daunting than actually doing something about it. To lay the groundwork for meaningful progress, this presentation will reshape your perspective, strengthen what you know, and improve how you talk about housing.
+### Make affordable *housing* {style="color:#3a9f9c"}
+
+[Increase supply:]{style="color:#3a9f9c"}
+
+::: {style="color:#3a9f9c"}
+
+- Zoning reform
+- Development subsidies
+- Mixed-income housing
+- Project-based assistance
+
+:::
+
+::::
+
+:::: {.column width="50%" .fragment}
+
+### Make housing *affordable* {style="color:#9691cf"}
+
+[Manage demand:]{style="color:#9691cf"}
+
+::: {style="color:#9691cf"}
+
+- Tenant-based assistance
+- Homebuyer grants
+- Home repair assistance
+- Living wages
+
+:::
+
+::::
+
+:::::
+
+# No wonder this is hard to talk about!
+
+## Are better conversations possible?
+
+::: {style="font-size: 1.4em; line-height: 1.2em"}
+- Housing is personal
+- Housing isn't partisan [*(usually)*]{.fragment}
+- Housing breaks people's brains
+:::
+
+---
+
+![](img/nimby-1.png)
+
+---
+
+![](img/nimby-2.png)
+
+---
+
+![](img/nimby-3.png)
+
+## {background-color="white"}
+
+![](img/dk.png){.absolute top=0 left=0 height="800"}
+
+. . .
+
+[Everyone thinks<br>they're an expert...]{.absolute left=1000 top=400}
+
+. . .
+
+![](img/dk-arrow.png){.absolute top=230 left=200 height="300"}
+
+## *Frames* and *backfires*
+
+:::: columns
+
+::: {.column width="60%" .fragment}
+
+### What is a FRAME? {style="color:#3a9f9c"}
+
+Frames are sets of choices about how information is presented. Effective framing requires:
+
+- Knowing your audience
+- Knowing what to lead with
+- Selecting words that “fit your frame”
+- Choosing what to leave unsaid
+
+:::
+
+::: {.column width="40%" .fragment}
+
+### How can it BACKFIRE? {style="color:#e66b3f"}
+
+A message ***backfires*** when it reinforces the audience’s existing biases, rather than changing them...
+
+...even when contradictory evidence is provided.
+
+:::
+
+::::
+
+## Common backfires
+
+## 4 tips for successful reframing
+
+## Are you prepared for Thanksgiving dinner?
+
+# What you should remember
+
+---
+
+- “Affordable” is just the start of the conversation
+- Take advantage of increasing attention on housing issues
+- How you talk about housing matters
+- We’re making more progress than you might think — but lots more to do
+
+---
+
+# Good luck! {.nonincremental background-color="#1a3454"}
+
+::: {style="font-size:1.2em"}
+
+We're here to help:<br><br>
+{{< fa envelope >}}&nbsp;&nbsp;[jonathan@housingforwardva.org](mailto:jonathan@housingforwardva.org)<br><br>
+{{< fa globe >}}&nbsp;&nbsp;[housingforwardva.org](https://www.housingforwardva.org)<br>
+{{< fa brands linkedin >}}&nbsp;&nbsp;[@housingforwardva](https://www.linkedin.com/company/housingforwardva)<br>
+{{< fa brands square-youtube >}}&nbsp;&nbsp;[@housingforwardva](https://www.youtube.com/channel/UCo0mKUJSFhxlEUHCR2AWxFw)<br>
+{{< fa brands twitter >}}&nbsp;&nbsp;[@housingfwdva](https://twitter.com/HousingFwdVA)<br>
+
+:::

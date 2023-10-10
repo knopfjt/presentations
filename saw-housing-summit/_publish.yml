@@ -1,0 +1,4 @@
+- source: saw-housing-summit.qmd
+  quarto-pub:
+    - id: 2416f179-ed1d-4cb6-84ef-89be42fc272c
+      url: 'https://jtknopf.quarto.pub/saw-housing-summit'
