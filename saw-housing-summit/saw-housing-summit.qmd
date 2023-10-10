@@ -1,0 +1,233 @@
+---
+format:
+  revealjs:
+    template-partials: 
+      - title-slide.html
+    incremental: true
+    self-contained: true
+    embed-resources: true
+    theme: custom.scss
+    width: 1400
+    height: 900
+    slide-number: c/t
+    logo: img/hfv_icon_white.png
+    from: markdown+emoji
+    footer: "SAW Housing Summit | October 11, 2023"
+title: "Mortgages, Municipalities,<br>Myths, and Misconceptions"
+subtitle: "How to frame the affordable housing conversation"
+author: "Jonathan Knopf<br>Executive Director for Programs"
+#affiliation: "SAW Housing Summit"
+#date: 2023-10-11
+#date-format: long
+title-slide-attributes:
+  data-background-color: "#1a3454"
+---
+
+# Why is it so hard to talk about housing?
+
+. . .
+
+*(As explained by Homer.)*
+
+---
+
+## There's too much going on.
+
+![](img/homer-confused.gif)
+
+## Some people refuse any reality other than their own.
+
+![](img/homer-genius.gif)
+
+## Some people say things you wish you could unhear.
+
+![](img/homer-bushes.gif)
+
+## It's easy to get frustrated!
+
+![](img/homer-hard.gif)
+
+## So what can we do?
+
+. . .
+
+:books: Know your facts and history
+
+. . .
+
+:hammer: Focus on solutions
+
+. . .
+
+:mega: Rethink how you talk [(then think again)]{.fragment}
+
+# What *is* affordable housing?
+
+## One term, many definitions.
+
+<br>
+
+:::: columns
+
+::: {.column width="33%" .fragment}
+
+### TECHNICAL {style="color:#3a9f9c"}
+
+[Your home is affordable if you pay **no more than 30 percent** of your gross income on housing costs.]{style="color:#3a9f9c"}
+
+:::
+
+::: {.column width="33%" .fragment}
+
+### PROGRAMMATIC {style="color:#9691cf"}
+
+[Your home is affordable if it is **subsidized by a public program** to reduce your housing costs.]{style="color:#9691cf"}
+
+:::
+
+::: {.column width="33%" .fragment}
+
+### HOLISTIC {style="color:#B1005F"}
+
+[Your home is affordable if you feel it is **safe, secure, healthy, and within your budget**.]{style="color:#B1005F"}
+
+:::
+
+::::
+
+## Housing is a spectrum.
+
+:::{.fragment}
+
+![](img/spectrum-1.png)
+
+![](img/spectrum-legend.png){.absolute bottom=75 left=0}
+
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+
+![](img/spectrum-2.png)
+
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+
+![](img/spectrum-3.png)
+
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+
+![](img/spectrum-4.png){.absolute right=50 height="105px"}
+
+:::
+
+# American housing policy in 3 charts
+
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-width: 6
+#| fig-align: center
+
+library(tidyverse)
+library(hdatools)
+library(scales)
+library(zoo)
+
+setwd("~/repos/presentations/saw-housing-summit")
+
+starts <- read_csv("data/starts.csv") |> 
+  arrange(DATE) |> 
+  mutate(mov_avg = rollmean(HOUST_POP, 120, align = "right", fill = NA))
+
+ggplot(starts, aes(x = as.Date(DATE))) +
+  geom_line(aes(y = HOUST_POP), color = "#B1005F") +
+  geom_line(aes(y = mov_avg), color = "grey30", linetype = 2) +
+  scale_x_date(
+    date_breaks = "10 years",
+    date_labels = "%Y",
+    limits = c(as.Date("1962-01-01"), Sys.Date()),
+    expand = c(0.03, 0.03)
+  ) +
+  scale_y_continuous(labels = label_percent()) +
+  labs(
+    title = "We Don't Build Them Like We Used To",
+    subtitle = "Monthly housing starts as share of population",
+    caption = "**Sources:** U.S. Census Bureau and U.S. Department of Housing and Urban Development."
+  ) +
+  add_zero_line("y") +
+  theme_hfv(base_size = 22) +
+  theme(
+    plot.background = element_rect(fill="#FFFCF0", color=NA),
+    panel.background = element_rect(fill="#FFFCF0", color=NA)
+    )
+
+```
+
+---
+
+![](img/fed-spending.jpg)
+
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| fig-width: 6
+#| fig-align: center
+
+lihtc <- read_csv("data/lihtc.csv")
+
+ggplot(lihtc, aes(year, units)) +
+  geom_col(fill = "#3a9f9c") +
+  scale_x_continuous(
+    breaks = c(1985, 1990, 1995, 2000, 2005, 2010, 2015, 2019)
+  ) +
+  scale_y_continuous(expand = c(0.02,0.01)) +
+  labs(
+    title = "LIHTC Finances More Than 50,000 New Homes Annually",
+    subtitle = "New construction LIHTC units, by year placed in service, in thousands",
+    caption = "**Source:** Urban Institute analysis of National Housing Preservation Database (2023).<br>**Note:** Includes 4 and 9 percent LIHTC."
+  ) +
+  add_zero_line("y") +
+  theme_hfv(base_size = 12) +
+  theme(
+    plot.background = element_rect(fill="#FFFCF0", color=NA),
+    panel.background = element_rect(fill="#FFFCF0", color=NA)
+    )
+
+```
+
+## Where does this leave us?
+
+- Not meeting demand
+- Shifting burdens and roles
+- Hard-pressed to plan for the future
+
+## Not to mention...
+
+[Lagging wages]{.absolute top=150 left=0}
+
+[Labor and material costs]{.absolute bottom=200 right=50}
+
+[Private equity acquisitions]{.absolute top=200 right=100}
+
+[Rising interest rates]{.absolute bottom=100 left=50}
+
+[Restrictive land use policies]{.absolute top=250 left=200}
+
+[Workforce shortages]{.absolute bottom=300 right=300}
+
+# A broken housing market makes things tough for everyone.
+
+## What's broken?
+
+
+
+## Header
+
+Talking about affordable housing might be the only thing more daunting than actually doing something about it. To lay the groundwork for meaningful progress, this presentation will reshape your perspective, strengthen what you know, and improve how you talk about housing.
