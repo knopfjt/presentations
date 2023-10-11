@@ -53,17 +53,15 @@ title-slide-attributes:
 
 ## So what can we do?
 
-. . .
+::: {.r-fit-text}
 
-:books: Know your facts and history
+[:books: Know your facts and history]{.fragment}
 
-. . .
+[:hammer: Focus on solutions]{.fragment}
 
-:hammer: Focus on solutions
+[:mega: Rethink how you talk about housing]{.fragment} [(then think again)]{.fragment}
 
-. . .
-
-:mega: Rethink how you talk [(then think again)]{.fragment}
+:::
 
 # What *is* affordable housing?
 
@@ -148,6 +146,7 @@ title-slide-attributes:
 ```{r}
 #| echo: false
 #| message: false
+#| cache: true
 #| fig-width: 6
 #| fig-align: center
 
@@ -195,6 +194,7 @@ ggplot(starts, aes(x = as.Date(DATE))) +
 ```{r}
 #| echo: false
 #| message: false
+#| cache: true
 #| fig-width: 6
 #| fig-align: center
 
@@ -212,7 +212,7 @@ ggplot(lihtc, aes(year, units)) +
     caption = "**Source:** Urban Institute analysis of National Housing Preservation Database (2023).<br>**Note:** Includes 4 and 9 percent LIHTC."
   ) +
   add_zero_line("y") +
-  theme_hfv(base_size = 12) +
+  theme_hfv(base_size = 22) +
   theme(
     plot.background = element_rect(fill="#FFFCF0", color=NA),
     panel.background = element_rect(fill="#FFFCF0", color=NA)
@@ -224,47 +224,43 @@ ggplot(lihtc, aes(year, units)) +
 
 . . .
 
-[Rising interest rates]{.absolute top=150 left=0}
+[:chart_with_upwards_trend: Rising interest rates]{.absolute top=150 left=0}
 
 . . .
 
-[Labor and material costs]{.absolute top=350 left=0}
+[:heavy_dollar_sign: Labor and material costs]{.absolute top=350 left=0}
 
 . . .
 
-[Restrictive land use policies]{.absolute top=550 left=0}
+[:construction: Restrictive land use policies]{.absolute top=550 left=0}
 
 . . .
 
-[Lagging wages]{.absolute top=150 left=650}
+[:chart_with_downwards_trend: Lagging wages]{.absolute top=150 left=675}
 
 . . .
 
-[Workforce shortages]{.absolute top=350 left=650}
+[:construction_worker: Workforce shortages]{.absolute top=350 left=675}
 
 . . .
 
-[Private equity acquisitions]{.absolute top=550 left=650}
+[:office: Private equity acquisitions]{.absolute top=550 left=675}
 
 ## Where does this leave us?
 
-. . .
+::: {style="text-size:1.4em"}
 
-Accelerating prices reflect lack of supply across the spectrum.
+[Accelerating prices reflect lack of supply<br>across the spectrum.]{.fragment .fade-in-then-semi-out}
 
-. . . 
+[Long-term shifts in federal policy place<br>increasing responsibilities on states and local communities.]{.fragment .fade-in-then-semi-out}
 
-Long-term shifts in federal policy place increasing responsibilities on states and local communities.
+[It's hard to plan for the future when<br>we're still solving the past.]{.fragment .fade-in-then-semi-out}
 
-. . .
-
-It's hard to plan for the future when we're still solving the past.
+:::
 
 # A broken housing market makes things tough for everyone.
 
 ## What can we do?
-
-<br>
 
 ::::: columns
 
@@ -306,12 +302,16 @@ It's hard to plan for the future when we're still solving the past.
 
 # No wonder this is hard to talk about!
 
-## Are better conversations possible?
+---
 
-::: {style="font-size: 1.4em; line-height: 1.2em"}
-- Housing is personal
-- Housing isn't partisan [*(usually)*]{.fragment}
-- Housing breaks people's brains
+::: {.r-fit-text .absolute top=100}
+
+[:house_with_garden: Housing is personal]{.fragment}
+
+[:handshake: Housing isn't partisan]{.fragment} [*(usually)*]{.fragment}
+
+[:brain: Housing breaks people's brains]{.fragment}
+
 :::
 
 ---
@@ -369,20 +369,117 @@ A message ***backfires*** when it reinforces the audience’s existing biases, r
 
 ## Common backfires
 
-## 4 tips for successful reframing
+::: columns
 
-## Are you prepared for Thanksgiving dinner?
+:::: {.column width="50%" .fragment}
 
-# What you should remember
+### "Traditional" message {style="color:#3a9f9c"}
+
+*John and Mary need our help. They are trying to overcome addiction and homelessness. They need an affordable home and counseling support.*
+
+::::
+
+:::: {.column width="50%"}
+
+::::: {.fragment}
+
+### PERSONAL RESPONSIBILITY {style="color:#B1005F"}
+
+*They should stop making poor decisions. Don’t ask me to pay for their mistakes.*
+
+:::::
+
+::::: {.fragment}
+
+### ZERO-SUM THINKING {style="color:#B1005F"}
+
+*I feel bad for them, but it’s got nothing to do with me. It’s not my responsibility to solve their problems.*
+
+:::::
+
+::::
+
+:::
+
+## Four tips for successful reframing
+
+::: {.columns}
+
+:::: {.column width="50%" .nonincremental style="color:#9691cf;font-size:1.2em;font-weight: bold;"}
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=1}
+1. Regional fairness
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=2}
+2. Focus on systems
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=3}
+3. Proactive explanations
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=4}
+4. Pivot to solutions
+:::::
+
+::::
+
+:::: {.column width="50%"}
+
+::::: {.fragment .fade-in-then-out .absolute top=150 fragment-index=1}
+Direct thinking away from personal decision-making to consequences faced by whole community. Orient benefits to **all** of us.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=280 fragment-index=2}
+Describe the roles and relationships among government, private market, and citizens.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=405 fragment-index=3}
+Connect the facts you may take for granted so your audience doesn’t fill in their own blanks with misleading information.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=545 fragment-index=4}
+End explanations with clear, actionable remedies to keep focus on *how* we can fix our problems.
+:::::
+
+::::
+
+:::
+
+## Are you ready for Thanksgiving?
+
+. . .
+
+::: {.r-fit-text}
+
+**Be prepared for wherever the conversation goes...**
+
+[:bulb: Use familiar places, terms, and concepts]{.fragment}
+
+[:family: Name the players and their roles in the system]{.fragment}
+
+[:chart_with_upwards_trend: Use data as ingredients, not the full dish]{.fragment}
+
+[:arrows_counterclockwise: Connect to larger problems that affect everyone]{.fragment}
+
+:::
+
+# What you should keep in mind today
 
 ---
 
-- “Affordable” is just the start of the conversation
-- Take advantage of increasing attention on housing issues
-- How you talk about housing matters
-- We’re making more progress than you might think — but lots more to do
+::: {.r-fit-text .absolute top=200}
 
----
+[“Affordable” is **just the start** of the conversation]{.fragment}
+
+[Take advantage of **increasing attention** on housing issues]{.fragment}
+
+[We’re **making more progress** than you might think]{.fragment}
+
+[...***but there's much more to do!***]{.fragment style="color:#3a9f9c;text-align:right;"}
+
+:::
 
 # Good luck! {.nonincremental background-color="#1a3454"}
 
