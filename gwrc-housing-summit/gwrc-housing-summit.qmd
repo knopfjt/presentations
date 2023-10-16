@@ -1,0 +1,27 @@
+---
+format:
+  revealjs:
+    template-partials: 
+      - title-slide.html
+    incremental: true
+    self-contained: true
+    embed-resources: true
+    theme: custom.scss
+    width: 1400
+    height: 900
+    slide-number: c/t
+    logo: img/hfv_icon_white.png
+    from: markdown+emoji
+    footer: "Regional Housing Summit | October 17, 2023"
+title: "title"
+subtitle: "subtitle"
+author: "Jonathan Knopf<br>Executive Director for Programs"
+description: |
+  description.
+# date: 2023-10-11
+# date-format: long
+title-slide-attributes:
+  data-background-color: "#1a3454"
+---
+
+# Start of presentation
