@@ -1,0 +1,162 @@
+---
+
+::: {.r-fit-text .absolute top=100}
+
+[:house_with_garden: Housing is personal]{.fragment}
+
+[:handshake: Housing isn't partisan]{.fragment} [*(usually)*]{.fragment}
+
+[:brain: Housing breaks people's brains]{.fragment}
+
+:::
+
+---
+
+![](img/nimby-1.png)
+
+---
+
+![](img/nimby-2.png)
+
+---
+
+![](img/nimby-3.png)
+
+## {background-color="white"}
+
+![](img/dk.png){.absolute top=0 left=0 height="800"}
+
+. . .
+
+[Everyone thinks<br>they're an expert...]{.absolute left=1000 top=400}
+
+. . .
+
+![](img/dk-arrow.png){.absolute top=230 left=200 height="300"}
+
+## *Frames* and *backfires*
+
+:::: columns
+
+::: {.column width="60%" .fragment}
+
+### What is a FRAME? {style="color:#3a9f9c"}
+
+Frames are sets of choices about how information is presented. Effective framing requires:
+
+- Knowing your audience
+- Knowing what to lead with
+- Selecting words that “fit your frame”
+- Choosing what to leave unsaid
+
+:::
+
+::: {.column width="40%" .fragment}
+
+### How can it BACKFIRE? {style="color:#e66b3f"}
+
+A message ***backfires*** when it reinforces the audience’s existing biases, rather than changing them...
+
+...even when contradictory evidence is provided.
+
+:::
+
+::::
+
+## Common backfires
+
+::: columns
+
+:::: {.column width="50%" .fragment}
+
+### "Traditional" message {style="color:#3a9f9c"}
+
+*John and Mary need our help. They are trying to overcome addiction and homelessness. They need an affordable home and counseling support.*
+
+::::
+
+:::: {.column width="50%"}
+
+::::: {.fragment}
+
+### PERSONAL RESPONSIBILITY {style="color:#B1005F"}
+
+*They should stop making poor decisions. Don’t ask me to pay for their mistakes.*
+
+:::::
+
+::::: {.fragment}
+
+### ZERO-SUM THINKING {style="color:#B1005F"}
+
+*I feel bad for them, but it’s got nothing to do with me. It’s not my responsibility to solve their problems.*
+
+:::::
+
+::::
+
+:::
+
+## Four tips for successful reframing
+
+::: {.columns}
+
+:::: {.column width="50%" .nonincremental style="color:#9691cf;font-size:1.2em;font-weight: bold;"}
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=1}
+1. Regional fairness
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=2}
+2. Focus on systems
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=3}
+3. Proactive explanations
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=4}
+4. Pivot to solutions
+:::::
+
+::::
+
+:::: {.column width="50%"}
+
+::::: {.fragment .fade-in-then-out .absolute top=150 fragment-index=1}
+Direct thinking away from personal decision-making to consequences faced by whole community. Orient benefits to **all** of us.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=280 fragment-index=2}
+Describe the roles and relationships among government, private market, and citizens.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=405 fragment-index=3}
+Connect the facts you may take for granted so your audience doesn’t fill in their own blanks with misleading information.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=545 fragment-index=4}
+End explanations with clear, actionable remedies to keep focus on *how* we can fix our problems.
+:::::
+
+::::
+
+:::
+
+## Are you ready for Thanksgiving?
+
+. . .
+
+::: {.r-fit-text}
+
+**Be prepared for wherever the conversation goes...**
+
+[:bulb: Use familiar places, terms, and concepts]{.fragment}
+
+[:family: Name the players and their roles in the system]{.fragment}
+
+[:chart_with_upwards_trend: Use data as ingredients, not the full dish]{.fragment}
+
+[:arrows_counterclockwise: Connect to larger problems that affect everyone]{.fragment}
+
+:::

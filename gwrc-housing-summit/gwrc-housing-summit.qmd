@@ -13,8 +13,8 @@ format:
     logo: img/hfv_icon_white.png
     from: markdown+emoji
     footer: "Regional Housing Summit | October 17, 2023"
-title: "title"
-subtitle: "subtitle"
+title: "Everything to Know about Housing in 60 Minutes"
+subtitle: "Regional Housing Summit Lunch Plenary"
 author: "Jonathan Knopf<br>Executive Director for Programs"
 description: |
   description.
@@ -24,19 +24,79 @@ title-slide-attributes:
   data-background-color: "#1a3454"
 ---
 
-# Intro
+{{< include homer.qmd >}}
 
-## What I'll cover
+## In less than an hour...
 
-- Housing spectrum
-- Three S's
-- How to talk about housing
+::: columns
+
+:::: {.column .highlight-last style="font-size: 1.5em"}
+
+1. Affordable housing 101
+2. The Three S's of Success
+3. Reframing the picture
+
+::::
+
+:::: {.column}
+
+![](img/gwrc-study.png){.fragment}
+
+::::
+
+:::
+
+# What *is* affordable housing?
+
+## One term, many definitions
+
+<br>
+
+:::: columns
+
+::: {.column width="33%" .fragment}
+
+### TECHNICAL {style="color:#3a9f9c"}
+
+[Your home is affordable if you pay **no more than 30 percent** of your gross income on housing costs.]{style="color:#3a9f9c"}
+
+:::
+
+::: {.column width="33%" .fragment}
+
+### PROGRAMMATIC {style="color:#9691cf"}
+
+[Your home is affordable if it is **subsidized by a public program** to reduce your housing costs.]{style="color:#9691cf"}
+
+:::
+
+::: {.column width="33%" .fragment}
+
+### HOLISTIC {style="color:#B1005F"}
+
+[Your home is affordable if you feel it is **safe, secure, healthy, and within your budget**.]{style="color:#B1005F"}
+
+:::
+
+::::
 
 # Housing is a spectrum
 
-## The housing spectrum
+## Area Median Income
+
+![](img/ami.png)
+
+::: aside
+
+[HUD FY 2023 Income Limits](https://www.huduser.gov/portal/datasets/il/il2023/2023summary.odn?states=%24states%24&data=2023&inputname=METRO47900M47900*Washington-Arlington-Alexandria%2C+DC-VA-MD+HUD+Metro+FMR+Area&stname=%24stname%24&statefp=99&year=2023&selection_type=hmfa) for<br>
+Washington-Arlington-Alexandria, DC-VA-MD HUD Metro FMR Area 	
+
+:::
+
+## Area Median Income
 
 ```{r}
+#| label: ami
 
 library(tidyverse)
 library(ggchicklet)
@@ -99,10 +159,6 @@ spectrum_plot +
 
 ```
 
-. . .
-
-[Area Median Income]{.absolute left="100"}
-
 ## Instability
 
 ```{r}
@@ -147,6 +203,24 @@ spectrum_plot +
 
 
 ```
+
+---
+
+::: {.center-text}
+
+**Housing Families First** (Richmond, Virginia)
+
+:::
+
+::: {.r-stack}
+
+![](img/hff1.jpg){.fragment height="700"}
+
+![](img/hff3.jpg){.fragment height="700"}
+
+![](img/hff2.jpg){.fragment height="700"}
+
+:::
 
 ## Rental market
 
@@ -214,6 +288,46 @@ spectrum_plot +
   )
 
 ```
+
+---
+
+::: {.center-text}
+
+**Hazel Hill Apartments** (Section 8)
+
+![](img/hazel-hill.jpg){height="700"}
+
+:::
+
+---
+
+::: {.center-text}
+
+**Wellington Woods** (Market affordable)
+
+![](img/wellington-woods.jpg){height="700"}
+
+:::
+
+---
+
+::: {.center-text}
+
+**Townsend Square** (LIHTC)
+
+![](img/townsend-square.jpg){height="700"}
+
+:::
+
+---
+
+::: {.center-text}
+
+**Hanover House** (New construction rental)
+
+![](img/hanover-house.jpg){height="700"}
+
+:::
 
 ## Homeownership
 
@@ -305,41 +419,220 @@ spectrum_plot +
 
 ```
 
+---
 
-## Area Median Income
+::: {.center-text}
+
+![](img/habitat.jpg){height="800"}
+
+:::
+
+---
+
+::: {.center-text}
+
+**Randolph Road** ($370,000)
+
+![](img/randolph.jpg){height="700"}
+
+:::
+
+---
+
+::: {.center-text}
+
+**Harrison Village** (From the $630,000s)
+
+![](img/harrison-village.jpg){height="700"}
+
+:::
+
+# A broken housing market makes things tough for everyone.
 
 
+# How can we fix it?
 
-# Three S's
+---
 
-1. Supply
-2. Stability
-3. Subsidy
+::: {.incremental .highlight-last style="font-size: 2.5em"}
 
-Shane Phillips
-The Affordable City
-https://www.planetizen.com/features/110948-affordable-city-offers-solutions-us-housing-affordability-crisis
+[:building_construction: Supply]{.fragment}
+
+[:house: Stability]{.fragment}
+
+[:moneybag: Subsidy]{.fragment}
+
+:::
+
+::: aside
+
+Shane Phillips, *The Affordable City*
+
+:::
 
 # Supply
 
-Enough homes for everyone - ABUNDANCE
+<br>*An abundance of homes for everyone*
 
-## Problems
+## Supply problems
 
-- Underbuilding for generations
-- Forgot (neglected?) to prepare for housing demand for two largest generations
-- Reaping what we (didn't) sow
+::: {.highlight-last}
 
-- Restrictive zoning and land use
-- Shrinking labor supply
-- Rising costs of materials
+- We've underbuilt for generations
+- Restrictive zoning makes land more expensive
+- Construction labor never recovered after 2008
+- Interest rate, inflation, and supply chain issues abound
 
-## Solutions
+:::
 
+[:arrow_forward: Half of all renters in the region are cost-burdened]{.fragment}
+
+[:arrow_forward: First-time homebuyers are nearly priced out]{.fragment}
+
+---
+
+![](img/gwrc-zoning.png)
+
+---
+
+![](img/price-type.png)
+
+## Supply solutions
+
+<br>*What local governments can do:*
+
+::: {.highlight-last}
+
+- Use comprehensive plan updates to explore long-term density options
+- Expand accessory dwelling units in residential districts
+- Explore inclusionary zoning
+- Permit by-right multifamily housing in more residential zones
+
+:::
 
 # Stability
 
+<br>*Keeping homeowners and renters in place*
 
+## Stability problems
 
+::: {.highlight-last}
 
-- Review 2020 study
+- Tight rental market doesn't incentivize property owners to make improvements
+- Pandemic-era rental protections and assistance have expired
+- No longer making significant progress on homelessness
+- Seniors are a significant portion of current and future housing demand
+
+:::
+
+[:arrow_forward: Proactive intervention needed to avoid significant long-term costs]{.fragment}
+
+---
+
+![](img/pit.png)
+
+---
+
+![](img/mkv.png)
+
+## Stability solutions
+
+[:no_entry: Localities in Virginia have very few powers to regulate rents and tenants' rights]{.fragment}
+
+[*What local governments can do:*]{.fragment}
+
+::: {.highlight-last}
+
+- Orient zoning and financial resources to make permanent support housing easier
+- Increase housing rehab and critical home repair programs
+- Revitalize manufactured home communities and replace poor quality homes
+- Create a center for first time, low/moderate-income homebuyer readiness
+
+:::
+
+# Subsidy
+
+<br>*Public investment to fill market gaps*
+
+## Subsidy problems
+
+::: {.highlight-last}
+
+- Long-term shifts in federal policy place increasing responsibilities on states and local communities
+- Only 7% of all the new homes built in the region over the past decade use public assistance to provide below-market rate rents
+- Just a fraction of households eligible and in need of housing assistance actually receive any
+
+[:arrow_forward: Local governments must get creative to supplement other resources]{.fragment}
+
+:::
+
+---
+
+![](img/fed-spending.jpg)
+
+---
+
+![](img/gap.png)
+
+---
+
+![](img/lihtc-exp.png)
+
+## Subsidy solutions
+
+<br>*What local governments can do:*
+
+::: {.highlight-last}
+
+- Establish local (or regional) housing trust funds
+- Establish a regional housing consortium to pool federal housing resources
+- Explore locally-run public development models
+
+:::
+
+[:warning: New dedicated revenue sources are necessary to make an impact]{.fragment}
+
+---
+
+![](img/htf.png)
+
+---
+
+::: {.center-text}
+
+![](img/nrv-htf.png)
+
+:::
+
+# This stuff is hard, right?
+
+{{< include reframing.qmd >}}
+
+# What you should keep in mind today
+
+---
+
+::: {.r-fit-text .absolute top=200}
+
+[“Affordable” is **just the start** of the conversation]{.fragment}
+
+[Take advantage of **increasing attention** on housing issues]{.fragment}
+
+[We’re **making more progress** than you might think]{.fragment}
+
+[...***but there's much more to do!***]{.fragment style="color:#3a9f9c;text-align:right;"}
+
+:::
+
+# Good luck! {.nonincremental background-color="#1a3454"}
+
+::: {style="font-size:1.2em"}
+
+We're here to help:<br><br>
+{{< fa envelope >}}&nbsp;&nbsp;[jonathan@housingforwardva.org](mailto:jonathan@housingforwardva.org)<br><br>
+{{< fa globe >}}&nbsp;&nbsp;[housingforwardva.org](https://www.housingforwardva.org)<br>
+{{< fa brands linkedin >}}&nbsp;&nbsp;[@housingforwardva](https://www.linkedin.com/company/housingforwardva)<br>
+{{< fa brands square-youtube >}}&nbsp;&nbsp;[@housingforwardva](https://www.youtube.com/channel/UCo0mKUJSFhxlEUHCR2AWxFw)<br>
+{{< fa brands twitter >}}&nbsp;&nbsp;[@housingfwdva](https://twitter.com/HousingFwdVA)<br>
+
+:::

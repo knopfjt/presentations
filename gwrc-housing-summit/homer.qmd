@@ -1,0 +1,35 @@
+# Why is it so hard to talk about housing?
+
+. . .
+
+*(As explained by Homer.)*
+
+---
+
+## There's too much going on.
+
+![](img/homer-confused.gif)
+
+## Some people refuse any reality other than their own.
+
+![](img/homer-genius.gif)
+
+## Some people say things you wish you could unhear.
+
+![](img/homer-bushes.gif)
+
+## It's easy to get frustrated!
+
+![](img/homer-hard.gif)
+
+## So what can we do?
+<br><br>
+::: {.incremental .highlight-last style="font-size: 1.5em"}
+
+[:books: Know your facts and history]{.fragment}
+
+[:hammer: Focus on solutions]{.fragment}
+
+[:mega: Rethink how you talk about housing]{.fragment} [(then think again)]{.fragment}
+
+:::
