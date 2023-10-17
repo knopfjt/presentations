@@ -6,7 +6,7 @@ This repository is a collection of presentations for various events and speaking
 *How to frame the affordable housing conversation*
 
 |          |                                                                                         |
-|--------------------|----------------------------------------------------|
+|--------------|----------------------------------------------------------|
 | Folder   | `\saw-housing-summit`                                                                   |
 | Client   | HousingForward Virginia                                                                 |
 | Date     | 2023-10-11                                                                              |
@@ -18,7 +18,7 @@ This repository is a collection of presentations for various events and speaking
 *title*
 
 |          |                                                                                                                              |
-|--------------------|----------------------------------------------------|
+|-------------|-----------------------------------------------------------|
 | Folder   | `\gwrc-housing-summit`                                                                                                       |
 | Client   | HousingForward Virginia                                                                                                      |
 | Date     | 2023-10-17                                                                                                                   |

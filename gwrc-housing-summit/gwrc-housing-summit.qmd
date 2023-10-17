@@ -4,9 +4,9 @@ format:
     template-partials: 
       - title-slide.html
     incremental: true
-    self-contained: true
-    embed-resources: true
-    theme: custom.scss
+    self-contained: false
+    embed-resources: false
+    theme: custom-hfv.scss
     width: 1400
     height: 900
     slide-number: c/t
@@ -24,4 +24,322 @@ title-slide-attributes:
   data-background-color: "#1a3454"
 ---
 
-# Start of presentation
+# Intro
+
+## What I'll cover
+
+- Housing spectrum
+- Three S's
+- How to talk about housing
+
+# Housing is a spectrum
+
+## The housing spectrum
+
+```{r}
+
+library(tidyverse)
+library(ggchicklet)
+library(hdatools)
+library(scales)
+
+setwd("~/repos/presentations/gwrc-housing-summit")
+
+spectrum <- read_csv("data/spectrum.csv")
+
+bar_height <- 0.4 
+
+pal <- c(
+  "Publicly-supported" = "#e66b3f",
+  "Market-based" = "#3a9f9c",
+  "AMI" = "#1a3454"
+)
+
+spectrum_plot <- ggplot() +
+  ggchicklet:::geom_rrect(
+    subset(spectrum, type == "AMI"),
+    mapping = aes(
+      xmin = start, 
+      xmax = end, 
+      ymin = -n - bar_height, 
+      ymax = -n + bar_height, 
+      fill = type
+    ),
+    r = unit(0.5, 'npc'),
+    alpha = 0.3
+  ) +
+  scale_x_continuous(
+    limits = c(0, 150),
+    expand = c(0, 0)
+    ) +
+  scale_y_continuous(limits = c(-10, 0.4), expand = c(0, 0)) +
+  scale_fill_manual(values = pal) +
+  scale_color_manual(values = pal) +
+  theme_hfv() +
+  theme(
+    plot.background = element_rect(fill="#FFFCF0", color=NA),
+    panel.background = element_rect(fill="#FFFCF0", color=NA),
+    axis.text = element_blank(),
+    panel.grid.major.y = element_blank()
+    )
+  
+spectrum_plot +
+  geom_text(
+    subset(spectrum, type == "AMI"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type,
+      hjust = 0.5
+    ),
+    fontface = "bold",
+    size = 8
+  ) 
+
+```
+
+. . .
+
+[Area Median Income]{.absolute left="100"}
+
+## Instability
+
+```{r}
+
+spectrum_plot +
+  geom_text(
+    subset(spectrum, type == "AMI"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type, 
+      hjust = 0.5
+    ),
+    fontface = "bold",
+    size = 4
+  ) +
+  ggchicklet:::geom_rrect(
+    subset(spectrum, category == "Instability"),
+    mapping = aes(
+      xmin = start, 
+      xmax = end, 
+      ymin = -n - bar_height, 
+      ymax = -n + bar_height, 
+      fill = type,
+      color = type
+    ),
+    r = unit(0.5, 'npc'),
+    alpha = 0.3
+  ) +
+  geom_text(
+    subset(spectrum, category == "Instability"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type,
+      hjust = 0.5
+    ),
+    fontface = "bold"
+  )
+
+
+```
+
+## Rental market
+
+```{r}
+
+spectrum_plot +
+  geom_text(
+    subset(spectrum, type == "AMI"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type, 
+      hjust = 0.5
+    ),
+    fontface = "bold",
+    size = 4
+  ) +
+  ggchicklet:::geom_rrect(
+    subset(spectrum, category == "Instability"),
+    mapping = aes(
+      xmin = start, 
+      xmax = end, 
+      ymin = -n - bar_height, 
+      ymax = -n + bar_height, 
+      fill = type
+    ),
+    r = unit(0.5, 'npc'),
+    alpha = 0.15
+  ) +
+  geom_text(
+    subset(spectrum, category == "Instability"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type,
+      hjust = 0.5
+    ),
+    alpha = 0.6
+  ) +
+  ggchicklet:::geom_rrect(
+    subset(spectrum, category == "Rental market"),
+    mapping = aes(
+      xmin = start, 
+      xmax = end, 
+      ymin = -n - bar_height, 
+      ymax = -n + bar_height, 
+      fill = type,
+      color = type
+    ),
+    r = unit(0.5, 'npc'),
+    alpha = 0.3
+  ) +
+  geom_text(
+    subset(spectrum, category == "Rental market"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type,
+      hjust = 0.5
+    ),
+    fontface = "bold"
+  )
+
+```
+
+## Homeownership
+
+```{r}
+
+spectrum_plot +
+  geom_text(
+    subset(spectrum, type == "AMI"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type, 
+      hjust = 0.5
+    ),
+    fontface = "bold",
+    size = 4
+  ) +
+  ggchicklet:::geom_rrect(
+    subset(spectrum, category == "Instability"),
+    mapping = aes(
+      xmin = start, 
+      xmax = end, 
+      ymin = -n - bar_height, 
+      ymax = -n + bar_height, 
+      fill = type
+    ),
+    r = unit(0.5, 'npc'),
+    alpha = 0.15
+  ) +
+  geom_text(
+    subset(spectrum, category == "Instability"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type,
+      hjust = 0.5
+    ),
+    alpha = 0.6
+  ) +
+  ggchicklet:::geom_rrect(
+    subset(spectrum, category == "Rental market"),
+    mapping = aes(
+      xmin = start, 
+      xmax = end, 
+      ymin = -n - bar_height, 
+      ymax = -n + bar_height, 
+      fill = type
+    ),
+    r = unit(0.5, 'npc'),
+    alpha = 0.15
+  ) +
+  geom_text(
+    subset(spectrum, category == "Rental market"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type,
+      hjust = 0.6
+    ),
+    alpha = 0.6
+  ) +
+  ggchicklet:::geom_rrect(
+    subset(spectrum, category == "Homeownership"),
+    mapping = aes(
+      xmin = start, 
+      xmax = end, 
+      ymin = -n - bar_height, 
+      ymax = -n + bar_height, 
+      fill = type,
+      color = type
+    ),
+    r = unit(0.5, 'npc'),
+    alpha = 0.3
+  ) +
+  geom_text(
+    subset(spectrum, category == "Homeownership"),
+    mapping = aes(
+      x = (end - start)/2 + start,
+      y = -n,
+      label = housing,
+      color = type,
+      hjust = 0.5
+    ),
+    fontface = "bold"
+  )
+
+```
+
+
+## Area Median Income
+
+
+
+# Three S's
+
+1. Supply
+2. Stability
+3. Subsidy
+
+Shane Phillips
+The Affordable City
+https://www.planetizen.com/features/110948-affordable-city-offers-solutions-us-housing-affordability-crisis
+
+# Supply
+
+Enough homes for everyone - ABUNDANCE
+
+## Problems
+
+- Underbuilding for generations
+- Forgot (neglected?) to prepare for housing demand for two largest generations
+- Reaping what we (didn't) sow
+
+- Restrictive zoning and land use
+- Shrinking labor supply
+- Rising costs of materials
+
+## Solutions
+
+
+# Stability
+
+
+
+
+- Review 2020 study

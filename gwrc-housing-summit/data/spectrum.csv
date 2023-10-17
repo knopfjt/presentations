@@ -1,0 +1,15 @@
+start,end,category,housing,type,n
+0,30,Instability,Shelters,Publicly-supported,1
+0,30,Instability,Supportive housing,Publicly-supported,2
+10,50,Rental market,Deep rental assistance,Publicly-supported,3
+10,80,Rental market,Market-affordable rental,Market-based,4
+30,80,Rental market,Affordable rental,Publicly-supported,5
+60,140,Rental market,New market-rate rental,Market-based,6
+60,110,Homeownership,Affordable homeownership,Publicly-supported,7
+70,120,Homeownership,Resales,Market-based,8
+100,150,Homeownership,New builds,Market-based,9
+0,30,,Below 30% AMI,AMI,0
+30,50,,30% to 50% AMI,AMI,0
+50,80,,50% to 80% AMI,AMI,0
+80,120,,80% to 120% AMI,AMI,0
+120,150,,Above 120% AMI,AMI,0
