@@ -23,7 +23,9 @@
 ![](img/homer-hard.gif)
 
 ## So what can we do?
+
 <br><br>
+
 ::: {.incremental .highlight-last style="font-size: 1.5em"}
 
 [:books: Know your facts and history]{.fragment}

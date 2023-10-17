@@ -1,0 +1,4 @@
+- source: gwrc-housing-summit.qmd
+  quarto-pub:
+    - id: 3999d35b-64da-4ba7-b516-a1b84a87b032
+      url: 'https://jtknopf.quarto.pub/gwrc-housing-summit'

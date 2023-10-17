@@ -4,8 +4,8 @@ format:
     template-partials: 
       - title-slide.html
     incremental: true
-    self-contained: false
-    embed-resources: false
+    self-contained: true
+    embed-resources: true
     theme: custom-hfv.scss
     width: 1400
     height: 900
@@ -601,6 +601,26 @@ Shane Phillips, *The Affordable City*
 ::: {.center-text}
 
 ![](img/nrv-htf.png)
+
+:::
+
+---
+
+::: {.center-text}
+
+**Montgomery County, MD Housing Production Fund**
+
+![](img/hpf.png)
+
+:::
+
+---
+
+::: {.center-text}
+
+**The Hurston** (First HPF project)
+
+![](img/hurston.png){height="700"}
 
 :::
 

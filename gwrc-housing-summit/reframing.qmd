@@ -160,3 +160,19 @@ End explanations with clear, actionable remedies to keep focus on *how* we can f
 [:arrows_counterclockwise: Connect to larger problems that affect everyone]{.fragment}
 
 :::
+
+## Much more to it:
+
+::: columns
+
+:::: {.column}
+![](img/frame2.png){height="500"}
+::::
+
+:::: {.column}
+![](img/frame1.png){height="500"}
+::::
+
+:::
+
+[frameworksinstitute.org/issues/housing](https://www.frameworksinstitute.org/issues/housing/)
