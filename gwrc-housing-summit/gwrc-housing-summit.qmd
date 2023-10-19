@@ -24,6 +24,14 @@ title-slide-attributes:
   data-background-color: "#1a3454"
 ---
 
+::: {.center-text}
+
+[bit.ly/RHS-HFV](https://bit.ly/RHS-HFV){style="font-size: 1.5em"}
+
+![](img/qr.png)
+
+:::
+
 {{< include homer.qmd >}}
 
 ## In less than an hour...
@@ -45,6 +53,56 @@ title-slide-attributes:
 ::::
 
 :::
+
+## About HousingForward Virginia
+
+<br>
+
+::: columns
+
+:::: {.column .fragment}
+### **WHAT WE DO** {style="color:#3a9f9c"}
+
+::::: {style="font-size: 0.7em"}
+**RESEARCH** on best practices to increase housing affordability.
+
+**EVENTS** to convene housing experts, policymakers, and community members.
+
+**COMMUNICATIONS** to keep Virginians informed on housing trends and news.
+
+**DATA** on housing, demographics, and other metrics freely available on our website.
+:::::
+::::
+
+:::: {.column .fragment}
+### **OUR BOARD** {style="color:#3a9f9c"}
+
+::::: {style="font-size: 0.6em"}
+Virginia Housing
+
+Department of Housing and Community Development
+
+REALTORS
+
+Local governments
+
+Nonprofit housing organizations
+
+Fair housing organizations
+
+Banks and lenders
+
+Other stakeholders
+:::::
+::::
+
+:::
+
+---
+
+[**WHERE WE GO**]{style="color:#3a9f9c"}
+
+![](img/hfv-map.png)
 
 # What *is* affordable housing?
 
@@ -509,6 +567,10 @@ Shane Phillips, *The Affordable City*
 - Permit by-right multifamily housing in more residential zones
 
 :::
+
+## Virginia Zoning Atlas
+
+![](img/vza-map.png)
 
 # Stability
 
