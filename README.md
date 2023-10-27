@@ -14,8 +14,8 @@ This repository is a collection of presentations for various events and speaking
 | Event    | [SAW Housing Summit](https://www.sawhousing.com/)                                       |
 | Link     | [jtknopf.quarto.pub/saw-housing-summit](https://jtknopf.quarto.pub/saw-housing-summit/) |
 
-**title**\
-*title*
+**Everything to Know about Housing in 60 Minutes**\
+*Regional Housing Summit Lunch Plenary*
 
 |          |                                                                                                                              |
 |-------------|-----------------------------------------------------------|
