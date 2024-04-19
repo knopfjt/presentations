@@ -1,0 +1,477 @@
+---
+format:
+  revealjs:
+    template-partials: 
+      - title-slide.html
+    incremental: true
+    self-contained: true
+    embed-resources: true
+    theme: custom.scss
+    width: 1400
+    height: 900
+    slide-number: c/t
+    logo: img/hfv_icon_white.png
+    from: markdown+emoji
+    footer: "Beyond Affordability: Setting the Stage | February 6, 2024"
+title: "Mortgages, Municipalities,<br>Myths, and Misconceptions"
+subtitle: "Everything to know about<br>affordable housing in 20 minutes"
+author: "Jonathan Knopf<br>Executive Director for Programs"
+description: |
+  Talking about affordable housing might be the only thing more daunting than 
+  actually doing something about it. To lay the groundwork for meaningful 
+  progress, this presentation will reshape your perspective, strengthen 
+  what you know, and improve how you talk about housing.
+# date: 2023-10-11
+# date-format: long
+title-slide-attributes:
+  data-background-color: "#1a3454"
+---
+
+# Why is it so hard to talk about housing?
+
+. . .
+
+*(As explained by Homer.)*
+
+---
+
+## There's too much going on.
+
+![](img/homer-confused.gif)
+
+## Some people refuse any reality other than their own.
+
+![](img/homer-genius.gif)
+
+## Some people say things you wish you could unhear.
+
+![](img/homer-bushes.gif)
+
+## It's easy to get frustrated!
+
+![](img/homer-hard.gif)
+
+## So what can we do?
+
+::: {.r-fit-text}
+
+[:books: Know your facts and history]{.fragment}
+
+[:hammer: Focus on solutions]{.fragment}
+
+[:mega: Rethink how you talk about housing]{.fragment} [(then think again)]{.fragment}
+
+:::
+
+# What *is* affordable housing?
+
+## One term, many definitions
+
+<br>
+
+:::: columns
+
+::: {.column width="33%" .fragment}
+
+### TECHNICAL {style="color:#3a9f9c"}
+
+[Your home is affordable if you pay **no more than 30 percent** of your gross income on housing costs.]{style="color:#3a9f9c"}
+
+:::
+
+::: {.column width="33%" .fragment}
+
+### PROGRAMMATIC {style="color:#9691cf"}
+
+[Your home is affordable if it is **subsidized by a public program** to reduce your housing costs.]{style="color:#9691cf"}
+
+:::
+
+::: {.column width="33%" .fragment}
+
+### HOLISTIC {style="color:#B1005F"}
+
+[Your home is affordable if you feel it is **safe, secure, healthy, and within your budget**.]{style="color:#B1005F"}
+
+:::
+
+::::
+
+## Housing is a spectrum
+
+:::{.fragment}
+
+![](img/spectrum-1.png)
+
+![](img/spectrum-legend.png){.absolute bottom=75 left=0}
+
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+
+![](img/spectrum-2.png)
+
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+
+![](img/spectrum-3.png)
+
+:::
+
+:::{.fragment .fade-in-then-semi-out}
+
+![](img/spectrum-4.png){.absolute right=50 height="105px"}
+
+:::
+
+# How it works
+
+## Homelessness and<br>supportive housing
+
+![](img/spectrum-homeless.png){.absolute top=250 width="1400"}
+
+## Public housing<br>and vouchers
+
+![](img/spectrum-ph.png){.absolute top=250 width="1400"}
+
+## Affordable rental
+
+![](img/spectrum-rental.png){.absolute top=250 width="1400"}
+
+# American housing policy in three charts
+
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| cache: true
+#| fig-width: 6
+#| fig-align: center
+
+library(tidyverse)
+library(hdatools)
+library(scales)
+library(zoo)
+
+setwd("~/repos/presentations/saw-housing-summit")
+
+starts <- read_csv("data/starts.csv") |> 
+  arrange(DATE) |> 
+  mutate(mov_avg = rollmean(HOUST_POP, 120, align = "right", fill = NA))
+
+ggplot(starts, aes(x = as.Date(DATE))) +
+  geom_line(aes(y = HOUST_POP), color = "#B1005F") +
+  geom_line(aes(y = mov_avg), color = "grey30", linetype = 2) +
+  scale_x_date(
+    date_breaks = "10 years",
+    date_labels = "%Y",
+    limits = c(as.Date("1962-01-01"), Sys.Date()),
+    expand = c(0.03, 0.03)
+  ) +
+  scale_y_continuous(labels = label_percent()) +
+  labs(
+    title = "We Don't Build Them Like We Used To",
+    subtitle = "Monthly housing starts as share of population",
+    caption = "**Sources:** U.S. Census Bureau and U.S. Department of Housing and Urban Development."
+  ) +
+  add_zero_line("y") +
+  theme_hfv(base_size = 22) +
+  theme(
+    plot.background = element_rect(fill="#FFFCF0", color=NA),
+    panel.background = element_rect(fill="#FFFCF0", color=NA)
+    )
+
+```
+
+---
+
+![](img/fed-spending.jpg)
+
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| cache: true
+#| fig-width: 6
+#| fig-align: center
+
+lihtc <- read_csv("data/lihtc.csv")
+
+ggplot(lihtc, aes(year, units)) +
+  geom_col(fill = "#3a9f9c") +
+  scale_x_continuous(
+    breaks = c(1985, 1990, 1995, 2000, 2005, 2010, 2015, 2019)
+  ) +
+  scale_y_continuous(expand = c(0.02,0.01)) +
+  labs(
+    title = "LIHTC Finances More Than 50,000 New Homes Annually",
+    subtitle = "New construction LIHTC units, by year placed in service, in thousands",
+    caption = "**Source:** Urban Institute analysis of National Housing Preservation Database (2023).<br>**Note:** Includes 4 and 9 percent LIHTC."
+  ) +
+  add_zero_line("y") +
+  theme_hfv(base_size = 22) +
+  theme(
+    plot.background = element_rect(fill="#FFFCF0", color=NA),
+    panel.background = element_rect(fill="#FFFCF0", color=NA)
+    )
+
+```
+
+## Not to mention...
+
+. . .
+
+[:chart_with_upwards_trend: Rising interest rates]{.absolute top=150 left=0}
+
+. . .
+
+[:heavy_dollar_sign: Labor and material costs]{.absolute top=350 left=0}
+
+. . .
+
+[:construction: Restrictive land use policies]{.absolute top=550 left=0}
+
+. . .
+
+[:chart_with_downwards_trend: Lagging wages]{.absolute top=150 left=675}
+
+. . .
+
+[:construction_worker: Workforce shortages]{.absolute top=350 left=675}
+
+. . .
+
+[:office: Private equity acquisitions]{.absolute top=550 left=675}
+
+## Where does this leave us?
+
+::: {style="text-size:1.4em"}
+
+[Accelerating prices reflect lack of supply<br>across the spectrum.]{.fragment .fade-in-then-semi-out}
+
+[Long-term shifts in federal policy place<br>increasing responsibilities on states and local communities.]{.fragment .fade-in-then-semi-out}
+
+[It's hard to plan for the future when<br>we're still solving the past.]{.fragment .fade-in-then-semi-out}
+
+:::
+
+# A broken housing market makes things tough for everyone.
+
+## What can we do?
+
+::::: columns
+
+:::: {.column width="50%" .fragment}
+
+### Make affordable *housing* {style="color:#3a9f9c"}
+
+[Increase supply:]{style="color:#3a9f9c"}
+
+::: {style="color:#3a9f9c"}
+
+- Zoning reform
+- Development subsidies
+- Mixed-income housing
+- Project-based assistance
+
+:::
+
+::::
+
+:::: {.column width="50%" .fragment}
+
+### Make housing *affordable* {style="color:#9691cf"}
+
+[Manage demand:]{style="color:#9691cf"}
+
+::: {style="color:#9691cf"}
+
+- Tenant-based assistance
+- Homebuyer grants
+- Home repair assistance
+- Living wages
+
+:::
+
+::::
+
+:::::
+
+# No wonder this is hard to talk about!
+
+---
+
+::: {.r-fit-text .absolute top=100}
+
+[:house_with_garden: Housing is personal]{.fragment}
+
+[:handshake: Housing isn't partisan]{.fragment} [*(usually)*]{.fragment}
+
+[:brain: Housing breaks people's brains]{.fragment}
+
+:::
+
+---
+
+![](img/nimby-1.png)
+
+---
+
+![](img/nimby-2.png)
+
+---
+
+![](img/nimby-3.png)
+
+## {background-color="white"}
+
+![](img/dk.png){.absolute top=0 left=0 height="800"}
+
+. . .
+
+[Everyone thinks<br>they're an expert...]{.absolute left=1000 top=400}
+
+. . .
+
+![](img/dk-arrow.png){.absolute top=230 left=200 height="300"}
+
+## *Frames* and *backfires*
+
+:::: columns
+
+::: {.column width="60%" .fragment}
+
+### What is a FRAME? {style="color:#3a9f9c"}
+
+Frames are sets of choices about how information is presented. Effective framing requires:
+
+- Knowing your audience
+- Knowing what to lead with
+- Selecting words that “fit your frame”
+- Choosing what to leave unsaid
+
+:::
+
+::: {.column width="40%" .fragment}
+
+### How can it BACKFIRE? {style="color:#e66b3f"}
+
+A message ***backfires*** when it reinforces the audience’s existing biases, rather than changing them...
+
+...even when contradictory evidence is provided.
+
+:::
+
+::::
+
+## Common backfires
+
+::: columns
+
+:::: {.column width="50%" .fragment}
+
+### "Traditional" message {style="color:#3a9f9c"}
+
+*John and Mary need our help. They are trying to overcome addiction and homelessness. They need an affordable home and counseling support.*
+
+::::
+
+:::: {.column width="50%"}
+
+::::: {.fragment}
+
+### PERSONAL RESPONSIBILITY {style="color:#B1005F"}
+
+*They should stop making poor decisions. Don’t ask me to pay for their mistakes.*
+
+:::::
+
+::::: {.fragment}
+
+### ZERO-SUM THINKING {style="color:#B1005F"}
+
+*I feel bad for them, but it’s got nothing to do with me. It’s not my responsibility to solve their problems.*
+
+:::::
+
+::::
+
+:::
+
+## Four tips for successful reframing
+
+::: {.columns}
+
+:::: {.column width="50%" .nonincremental style="color:#9691cf;font-size:1.2em;font-weight: bold;"}
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=1}
+1. Regional fairness
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=2}
+2. Focus on systems
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=3}
+3. Proactive explanations
+:::::
+
+::::: {.fragment .fade-in-then-semi-out fragment-index=4}
+4. Pivot to solutions
+:::::
+
+::::
+
+:::: {.column width="50%"}
+
+::::: {.fragment .fade-in-then-out .absolute top=150 fragment-index=1}
+Direct thinking away from personal decision-making to consequences faced by whole community. Orient benefits to **all** of us.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=280 fragment-index=2}
+Describe the roles and relationships among government, private market, and citizens.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=405 fragment-index=3}
+Connect the facts you may take for granted so your audience doesn’t fill in their own blanks with misleading information.
+:::::
+
+::::: {.fragment .fade-in-then-out .absolute top=545 fragment-index=4}
+End explanations with clear, actionable remedies to keep focus on *how* we can fix our problems.
+:::::
+
+::::
+
+:::
+
+# What you should keep in mind today
+
+---
+
+::: {.r-fit-text .absolute top=200}
+
+[“Affordable” is **just the start** of the conversation]{.fragment}
+
+[Take advantage of **increasing attention** on housing issues]{.fragment}
+
+[We’re **making more progress** than you might think]{.fragment}
+
+[...***but there's much more to do!***]{.fragment style="color:#3a9f9c;text-align:right;"}
+
+:::
+
+# Good luck! {.nonincremental background-color="#1a3454"}
+
+::: {style="font-size:1.2em"}
+
+We're here to help:<br><br>
+{{< fa envelope >}}&nbsp;&nbsp;[jonathan@housingforwardva.org](mailto:jonathan@housingforwardva.org)<br><br>
+{{< fa globe >}}&nbsp;&nbsp;[housingforwardva.org](https://www.housingforwardva.org)<br>
+{{< fa brands linkedin >}}&nbsp;&nbsp;[@housingforwardva](https://www.linkedin.com/company/housingforwardva)<br>
+{{< fa brands square-youtube >}}&nbsp;&nbsp;[@housingforwardva](https://www.youtube.com/channel/UCo0mKUJSFhxlEUHCR2AWxFw)<br>
+{{< fa brands twitter >}}&nbsp;&nbsp;[@housingfwdva](https://twitter.com/HousingFwdVA)<br>
+
+:::
