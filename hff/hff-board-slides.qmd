@@ -1,0 +1,41 @@
+---
+title: "Housing Costs and Homelessness in Richmond Region"
+format: revealjs
+---
+
+```{r}
+library(tidyverse)
+library(tidycensus)
+library(hdatools)
+```
+
+
+---
+
+Housing Costs and Homelessness. I was thinking you could draw from the work of the CoC Strategic Plan lead by HDAdvisors and quote provide insights on the number of rent-burdened households and the number of units needed. Perhaps note the GAO's finding that a $100 median increase in rents was associated with a 9% increase in homelessness in areas it studied. Whatever you think provides some high-level insight on the landscape we are in as a homeless services provider.
+
+---
+
+PIT
+
+```{r}
+
+pit <- read_
+
+
+```
+
+
+---
+
+MKV data
+
+---
+
+
+
+```{r}
+1 + 1
+```
+
+
