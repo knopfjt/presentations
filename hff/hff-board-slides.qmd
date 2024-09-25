@@ -1,41 +1,151 @@
 ---
-title: "Housing Costs and Homelessness in Richmond Region"
+title: "Housing Costs and Homelessness in the Richmond Region"
 format: revealjs
 ---
 
+---
+
 ```{r}
+#| echo: false
 library(tidyverse)
 library(tidycensus)
+library(scales)
+library(lubridate)
 library(hdatools)
+
+setwd("~/repos/presentations/hff")
 ```
 
 
+```{r}
+#| echo: false
+
+
+starts <- read_csv("data/starts-rva.csv") |> 
+  mutate(period = parse_date_time(period, "yq"))
+
+starts |> 
+  ggplot(aes(x = as.Date(period), y = starts)) +
+  geom_col(fill = "#445ca9") +
+  scale_y_continuous(labels = label_comma()) +
+  scale_x_date(
+    date_labels = "%Y-%m",
+    date_breaks = "6 months",
+    limits = c(as.Date("2000-01-01"), as.Date("2023-07-01")),
+    expand = c(0, 0)
+    ) +
+  #scale_fill_hda() +
+  theme_hda() +
+  add_zero_line() +
+  labs(
+    title = "Multifamily construction starts",
+    subtitle = "Richmond, Henrico, and Chesterfield",
+    caption = "**Source:** CoStar Group, Inc."
+  ) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
+
+```
+
 ---
-
-Housing Costs and Homelessness. I was thinking you could draw from the work of the CoC Strategic Plan lead by HDAdvisors and quote provide insights on the number of rent-burdened households and the number of units needed. Perhaps note the GAO's finding that a $100 median increase in rents was associated with a 9% increase in homelessness in areas it studied. Whatever you think provides some high-level insight on the landscape we are in as a homeless services provider.
-
----
-
-PIT
 
 ```{r}
+#| echo: false
 
-pit <- read_
+vacancy <- read_csv("data/vacancy-br.csv") |> 
+  filter(br != "Studio")
+
+vacancy |> 
+  ggplot(aes(x = period, y = vr, group = br, color = br)) +
+  geom_line(linewidth = 1.5) +
+  scale_y_continuous(labels = label_percent()) +
+  scale_color_hda() +
+  theme_hda() +
+  labs(
+    title = "Rental vacancy rate by bedroom",
+    subtitle = "Richmond, Henrico, and Chesterfield",
+    caption = "**Source:** CoStar Group, Inc."
+  ) +
+  theme(
+    legend.position = "right",
+    axis.text.x = element_text(angle = 90))
+
+```
+
+---
+
+```{r}
+#| echo: false
+
+rent <- read_csv("data/rent-br.csv") |> 
+  filter(br != "Studio")
+
+rent |> 
+  ggplot(aes(x = period, y = rent, group = br, color = br)) +
+  geom_line(linewidth = 1.5) +
+  scale_y_continuous(labels = label_dollar()) +
+  scale_color_hda() +
+  theme_hda() +
+  labs(
+    title = "Average asking rent by bedroom",
+    subtitle = "Richmond, Henrico, and Chesterfield",
+    caption = "**Source:** CoStar Group, Inc."
+  ) +
+  theme(
+    legend.position = "right",
+    axis.text.x = element_text(angle = 90))
+
+```
+
+---
+
+![](gap.png)
+
+---
+
+```{r}
+#| echo: false
+
+pit <- read_csv("data/pit-rva.csv")
+
+pit |> 
+  ggplot(aes(x = as.character(year), y = count)) +
+  geom_col(fill = "#445ca9") +
+  scale_y_continuous(labels = label_comma()) +
+  theme_hda() +
+  add_zero_line() +
+  labs(
+    title = "Point-in-Time Count",
+    subtitle = "Greater Richmond CoC",
+    caption = "**Source:** Homeward"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
 
 
 ```
 
-
 ---
-
-MKV data
-
----
-
-
 
 ```{r}
-1 + 1
+#| echo: false
+
+mkv <- read_csv("data/mkv-rva.csv") |> 
+  mutate(name = str_wrap(name, 19))
+
+mkv |> 
+  ggplot(aes(x = as.character(year), y = count, fill = name)) +
+  geom_col() +
+  facet_wrap(~name) +
+  scale_y_continuous(labels = label_comma()) +
+  scale_fill_hda() +
+  theme_hda() +
+  add_zero_line() +
+  labs(
+    title = "Children identified as homeless (McKinney-Vento)",
+    caption = "**Source:** Project HOPE-Virginia"
+  ) +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5))
+
+
 ```
 
 
